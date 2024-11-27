@@ -1,0 +1,403 @@
+@use 'media-queries' as m;
+@use 'color' as *;
+// @import '../../inc/css/lib/bootstrap/bootstrap.min.css';
+@import 'dashboard';
+@import 'wizard';
+@import 'integration';
+
+.btn-primary,
+.blue {
+  background: $primary !important;
+  border-color: $primary !important;
+  color: #fff !important;
+}
+
+.btn-default{
+  background: $default !important;
+}
+
+.bg-primary {
+  background-color: $primary !important;
+}
+
+.btn {
+  background: $primary !important;
+  border-color: $primary;
+  color: #fff !important;
+
+  &:hover{
+    border-color: $primary !important;
+  }
+  
+  &.btn-primary:active, &.btn-primary:hover{
+    background-color: $primary !important;
+    border-color: $primary !important;
+  }
+
+  &.btn-success {
+    background-color: green !important;
+  }
+
+  &.btn-danger {
+    background-color: $danger !important;
+    border-color: transparent !important;
+  }
+
+  &.btn-danger-outline {
+    background-color: $light !important;
+    border: 1px $danger solid !important;
+    color: $danger !important;
+
+    &:hover {
+      background-color: $danger !important;
+      color: #fff !important;
+    }
+  }
+
+  &.btn-warning-outline {
+    background-color: $light !important;
+    border: 1px $warning solid !important;
+    color: $warning !important;
+
+    &:hover {
+      background-color: $warning !important;
+      color: #fff !important;
+    }
+  }
+
+  &.btn-success-outline {
+    background-color: $light !important;
+    border: 1px $success solid !important;
+    color: $success !important;
+
+    &:hover {
+      background-color: $success !important;
+      color: #fff !important;
+    }
+  }
+
+
+  &.btn-primary-outline, 
+  &.btn-primary-outline:focus{
+    border-color: $primary !important;
+  }
+
+}
+
+//overwrite text color
+.text-light {
+  color: $light !important;
+}
+
+a.text-light:focus, a.text-light:hover {
+  color: $light !important;
+}
+
+// .active {
+//   font-weight: 700 !important;
+// }
+
+a,
+a:focus,
+a:hover {
+  color: $primary;
+}
+
+.card-blue-fill {
+  .card-header {
+    border-bottom-color: $primary;
+    background-color: $primary;
+    color: #fff;
+  }
+}
+
+.navbar-static-top {
+  justify-content: end;
+  text-align: center;
+  margin-bottom: 0;
+
+  ul {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+  }
+}
+
+.navbar {
+  background-color: $primary !important;
+  transition: background-color 0.3s ease-in-out;
+
+  .container-fluid {
+    // margin-left: 6rem !important;
+    // margin-right: 6rem !important;
+
+    @include m.tablet {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .navbar-brand {
+      @include m.fold {
+        width: 50%;
+      }
+    }
+  }
+
+  .navbar-nav {
+    text-wrap: nowrap;
+  }
+
+  .nav-item {
+    border-right: 1px solid #fafafa;
+
+    @include m.tablet {
+      border: none;
+    }
+
+    .nav-link {
+      .profile {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        background: transparent;
+        border: none;
+      }
+    }
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+
+  .nav-item a {
+    font-weight: 400;
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0 0.5rem;
+  }
+
+  .dropdown-menu {
+    padding: 1rem;
+
+    &.user {
+      left: -6rem;
+    }
+
+    a {
+      padding: 0.5rem;
+      margin-left: 0;
+
+      &.active {
+        color: #fff !important;
+        text-decoration: none !important;
+        background-color: $primary !important;
+      }
+
+      &:active {
+        color: #fff !important;
+        text-decoration: none !important;
+        background-color: $primary !important;
+      }
+
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+
+  .navbar-nav .nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+  }
+}
+
+// tabs-section-nav
+.nav {
+  .nav-item {
+    .nav-link.active {
+      color: $primary;
+    }
+
+    .nav-link-in {
+      border-top-color: transparent !important;
+
+      i {
+        display: none;
+      }
+
+      .fa-hourglass-end::before {
+        content: '';
+      }
+    }
+  }
+}
+
+.box-typical-header {
+  h3 {
+    color: $primary !important;
+
+    span.font-icon {
+      color: $primary !important;
+    }
+  }
+}
+
+.calendly-badge-content {
+  background-color: $primary !important;
+}
+
+.page-item {
+  &.active {
+    background-color: $primary !important;
+
+    .page-link {
+      border-color: $primary !important;
+      background-color: $primary !important;
+    }
+  }
+}
+
+.page-content {
+  @include m.tablet {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+#nextBtn {
+  background: $primary !important;
+}
+
+.fc-state-active {
+  background: $primary !important;
+}
+
+.login_logo {
+  width: 260px;
+  margin-bottom: 10px;
+}
+
+// .page-center {
+//   height: calc(100vh-86px) !important;
+// }
+
+.ul-list-bullet {
+  list-style: disc !important;
+  padding-left: 1em !important;
+  margin-left: 1em !important;
+}
+
+.fa-xl {
+  font-size: 2em !important;
+  line-height: 1em !important;
+}
+
+.form-control:focus {
+  box-shadow: 0 0 0 0.1rem rgb(0, 96, 127, 0.7) !important;
+}
+
+.flatpickr .input-group-text .font-icon {
+  color: $primary !important;
+}
+.flatpickr-day.today {
+  background: $primary !important;
+  color: $light !important;
+}
+
+.fc-next-button:hover,
+.fc-prev-button:hover {
+  color: $primary !important;
+}
+
+.dataTables_filter input[type='search'] {
+  width: auto !important;
+  border: 1px solid #00607f !important;
+}
+
+div.dtsp-panesContainer div.dtsp-titleRow button {
+  background: $primary !important;
+  border: solid 1px $primary !important;
+}
+
+table.dataTable {
+  border-collapse: collapse !important;
+}
+
+.datatable {
+  table > tbody > tr.selected {
+    background-color: $primary !important;
+  }
+}
+
+.dataTables_searchPane
+  .dtsp-panesContainer
+  .dtsp-searchPane
+  .dtsp-list
+  ul
+  li.selected {
+  background-color: #ffcc00 !important; /* Change this to your desired background color */
+}
+
+.dropdown.dropdown-typical a.dropdown-toggle:hover,
+.dropdown.dropdown-typical.open a.dropdown-toggle {
+  color: $light !important;
+}
+
+.toolbar-bottom {
+  .btn.btn-secondary,
+  .btn.btn-secondary:active,
+  .btn.btn-secondary:hover {
+    background-color: $success !important;
+    border: $success !important;
+  }
+}
+
+.btn-primary:not(:disabled):not(.disabled).active,
+.btn-primary:not(:disabled):not(.disabled):active,
+.show > .btn-primary.dropdown-toggle {
+  background-color: $primary !important;
+  border-color: $primary !important;
+  box-shadow: 0 0 0 0.2rem rgb(0, 96, 127, 0.5);
+}
+
+.btn.dropdown-toggle,
+.btn.dropdown-toggle:focus {
+  background-color: $primary !important;
+  border-color: $primary !important;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active:focus,
+.btn-primary:not(:disabled):not(.disabled):active:focus,
+.show > .btn-primary.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgb(0, 96, 127, 0.5);
+}
+
+.sa-button-container {
+  .cancel {
+    background: $danger !important;
+    color: $light !important;
+  }
+  .cancel:hover{
+    color: $light !important;
+  }
+}
+
+.font-icon:hover {
+  color: $primary !important;
+}
+
+div.dtHeader #datatable_filter #btn-toggle-searchpanes .fa:hover{
+  color: $primary !important;
+}
+
+div.dtsp-searchPane div.dtsp-topRow.dtsp-bordered:hover{
+  border-color: $primary !important;
+}
+
+.widget {
+  border: 1px solid #d8e2e7;
+}

@@ -1,0 +1,27 @@
+{
+	"description": "SATS Agency",
+	"name": "sats/agency",
+	"type": "project",
+	"homepage": "https://codeigniter.com",
+	"license": "MIT",
+	"support": {
+		"forum": "http://forum.codeigniter.com/",
+		"wiki": "https://github.com/bcit-ci/CodeIgniter/wiki",
+		"slack": "https://codeigniterchat.slack.com",
+		"source": "https://github.com/bcit-ci/CodeIgniter"
+	},
+	"require": {
+		"php": "^7.3",
+		"vlucas/phpdotenv": "^5.5",
+		"robmorgan/phinx": "^0.14.0",
+		"hashids/hashids": "^4.1"
+	},
+	"config": {
+		"php": "7.3"
+	},
+	"scripts": {
+		"post-update-cmd": [
+			"php -r \"file_put_contents('vendor/.htaccess', 'Order allow,deny' . PHP_EOL . 'Deny from all');\""
+		]
+	}
+}

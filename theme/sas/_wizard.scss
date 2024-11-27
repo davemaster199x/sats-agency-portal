@@ -1,0 +1,28 @@
+label.btn {
+  background: $light !important;
+  border-color: $primary !important;
+  color: $primary !important;
+
+  .serv_not_sats {
+    accent-color: $light !important;
+  }
+}
+
+.services_chkbox_wrapper {
+  label.btn.active {
+    background: $primary !important;
+    border-color: $primary !important;
+    color: $light !important;
+  }
+}
+
+ul.steps_ul li.step span.step-icon-finish {
+  color: $success !important;
+}
+
+.steps-numeric-footer {
+  .btn.btn-success {
+    background: $primary !important;
+    color: $light !important;
+  }
+}

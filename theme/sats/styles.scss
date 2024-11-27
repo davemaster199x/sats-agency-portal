@@ -1,0 +1,68 @@
+@use 'color' as *;
+// @import '../../inc/css/lib/bootstrap/bootstrap.min.css';
+@import 'integration';
+
+.bg-primary {
+  background-color: $primary !important;
+}
+
+.ul-list-bullet {
+  list-style: disc !important;
+  padding-left: 1em !important;
+  margin-left: 1em !important;
+}
+
+.fa-xl {
+  font-size: 2em !important;
+  line-height: 1em !important;
+}
+
+.gap-1 {
+  gap: 1rem;
+}
+
+.gap-2 {
+  gap: 2rem;
+}
+
+.gap-3 {
+  gap: 3rem;
+}
+
+.gap-4 {
+  gap: 4rem;
+}
+
+.flatpickr .input-group-text .font-icon {
+  color: $primary !important;
+}
+.flatpickr-day.today {
+  background: $primary !important;
+  color: $light !important;
+}
+
+.fc-next-button:hover,
+.fc-prev-button:hover {
+  color: $primary !important;
+}
+
+.toolbar-bottom {
+  .btn.btn-secondary:active,
+  .btn.btn-secondary:hover {
+    background-color: $success !important;
+    border: $success !important;
+  }
+}
+
+.btn-primary:not(:disabled):not(.disabled).active,
+.btn-primary:not(:disabled):not(.disabled):active,
+.show > .btn-primary.dropdown-toggle {
+  background-color: $primary !important;
+  border-color: $primary !important;
+}
+
+.btn.dropdown-toggle,
+.btn.dropdown-toggle:focus {
+  background-color: $primary !important;
+  border-color: $primary !important;
+}

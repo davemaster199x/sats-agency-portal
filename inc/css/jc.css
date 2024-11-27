@@ -1,0 +1,13 @@
+/* .profile_pic{
+	border-radius: 50%;
+	width: 200px;
+	height: 200px;
+	border-color: #00a1f3!important;
+} */
+
+.profile_pic_small{
+	border-radius: 50%;
+	width: 30px;
+	height: 30px;
+	border-color: #dee2e6!important;
+}

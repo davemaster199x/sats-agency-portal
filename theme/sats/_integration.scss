@@ -1,0 +1,108 @@
+.api-integration {
+  margin: 2rem auto;
+  max-width: 420px !important;
+  height: calc(100vh - 220px);
+
+  h3 {
+    font-size: large;
+    text-align: justify;
+  }
+
+  .text-wrap {
+    text-wrap: wrap !important;
+  }
+
+  &__dropdown {
+    margin: 2rem auto;
+    width: 100%;
+    text-align: center;
+
+    a {
+      margin: auto;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .dropdown-item {
+      padding: 0.5rem;
+      display: flex;
+      justify-content: flex-start;
+      gap: 1rem;
+
+      &:hover {
+        background: $primary;
+        color: $light;
+      }
+    }
+  }
+}
+
+.apiIntegrationWizardModal {
+  .modal-header {
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+
+    img {
+      width: 60%;
+      margin: auto;
+    }
+  }
+
+  .step-anchor {
+    flex-wrap: nowrap !important;
+  }
+
+  .sw-btn-prev {
+    width: 50% !important;
+    background: $light !important;
+    border: solid 1px $primary !important;
+    border-radius: 0px !important;
+    color: $primary !important;
+  }
+
+  .sw-btn-next {
+    width: 50% !important;
+    color: #fff !important;
+    background: $primary !important;
+    border: solid 1px $primary !important;
+    margin-left: 0px !important;
+    border-radius: 0px !important;
+  }
+
+  .sw-btn-custom {
+    width: 50% !important;
+    color: #fff !important;
+    background: $primary !important;
+    border: solid 1px $primary !important;
+    margin-left: 0px !important;
+    border-radius: 0px !important;
+  }
+
+  .sw-theme-default > ul.step-anchor > li.active > a {
+    color: $primary !important;
+  }
+}
+.sa-icon.sa-custom {
+  width: 100% !important;
+}
+
+.sw-btn-group {
+  width: 100% !important;
+}
+
+// smartwizard css
+.nav {
+  .num {
+    border: none !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+.toolbar-bottom {
+  display: flex !important;
+}

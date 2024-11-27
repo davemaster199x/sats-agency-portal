@@ -1,0 +1,30 @@
+
+
+RewriteEngine On
+
+#redirect to HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# CodeIgniter
+RewriteCond %{REQUEST_URI} !\.(ico|jpg|png|css|js|php)$
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php/$1 [L]
+
+# STRONG HTACCESS PROTECTION
+<Files ~ "^\.([Ee][Nn][Vv]).*">
+ order allow,deny
+ deny from all
+</Files>
+<Files "composer.(json|lock)">
+ order allow,deny
+ deny from all
+</Files>
+
+# php -- BEGIN cPanel-generated handler, do not edit
+# Set the “ea-php73” package as the default “PHP” programming language.
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php73 .php .php7 .phtml
+</IfModule>
+# php -- END cPanel-generated handler, do not edit
